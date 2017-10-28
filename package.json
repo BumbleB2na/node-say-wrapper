@@ -1,0 +1,15 @@
+{
+  "name": "node-say-wrapper",
+  "version": "0.1.0",
+  "description": "Wraps node-say, say.js methods to support use of async/await.",
+  "main": "index.js",
+  "author": "Brendan Barr",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "say": "^0.13.1"
+  },
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha"
+  }
+}
