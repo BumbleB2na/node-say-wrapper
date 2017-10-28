@@ -8,23 +8,26 @@ Make calls to access two of the original say.js methods (speak and stop) by usin
 ```
 var { Say } = require('./lib/Say');
 
+(function main() {
+    sayStuff();
+})();
+
 async function sayStuff() {
     try {
         await Say.speak('Hello world!');
         await stopTalking();
         await Say.speak('Bye bye.');
     } catch(err) {
-        console.error(err); return;  // Error object bubbled up from Promise.reject
+        console.error('Say.js Error: ' + err.message); return;  // Error object bubbled up from Promise.reject
     }
 }
-sayStuff();
 
 async function stopTalking() {
     try {
         setTimeout(() => { Say.stop(); }, 1100);
         await Say.speak('Stop talking.');  // Will say, "Stop talk--" and talking will be stopped mid-sentence
     } catch(err) {
-        console.error(err); return;
+        console.error('Say.js Error: ' + err.message); return;
     }
 }
 ```
