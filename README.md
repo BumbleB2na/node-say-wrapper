@@ -36,3 +36,10 @@ async function stopTalking() {
     - Say.speak('...'); while an active tts instance is already speaking.
 - Mocha unit tests to ensure node-say-wrapper still does as advertised.
   
+## Setup
+Install using yarn then use the scripts available in package.json. For example:
+```
+yarn
+yarn demo
+yarn test
+```
